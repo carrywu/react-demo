@@ -8,9 +8,7 @@ function HookDemo() {
     setList([...lists,inputValue])
   }
   const liClick = function (index) {
-
     lists.splice(index,1);
-
     console.log('lists',inputValue,lists,index);
     clickBtn([...lists])
 };
