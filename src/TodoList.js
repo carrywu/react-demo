@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import store from './store';
-import {getTodoList,getInputChangeAction,getAddItemAction,getDeleteItemAction,initListAction} from './store/actionCreators';
+
+import {getInitList,getInputChangeAction,getAddItemAction,getDeleteItemAction,initListAction} from './store/actionCreators';
 import TodoListUI from './TodoListUI';
 
 import HookDemo from "./hookDemo"
@@ -30,9 +31,10 @@ class TodoList extends Component {
         )
     }
     componentDidMount(){
-        const action = getTodoList();
+  
+        const action = getInitList();
         store.dispatch(action)
-        console.log(action)
+        console.log('action----',action)
     }
 
     handleInputChange(e){
