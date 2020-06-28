@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-
 import store from './store';
 import {getInputChangeAction,getAddItemAction,getDeleteItemAction,initListAction} from './store/actionCreators';
 import TodoListUI from './TodoListUI';
 import axios from 'axios';
+import HookDemo from "./hookDemo"
 class TodoList extends Component {
     constructor(props) {
         super(props);
@@ -15,14 +15,17 @@ class TodoList extends Component {
     }
     render() {
         return (
-
-            <TodoListUI
+            <div>
+             <TodoListUI
             inputValue = {this.state.inputValue}
             handleInputChange = {this.handleInputChange}
             handleBtnClick = {this.handleBtnClick}
             handleItemDelete = {this.handleItemDelete}
             list = {this.state.list}
             />
+            <HookDemo/>
+            </div>
+      
 
         )
     }
